@@ -1,0 +1,44 @@
+html{
+    overflow-y: scroll;
+}
+
+.search__block{
+    width: 50%;
+    margin: 1% 25%;
+}
+.findTimelineBtn{
+    width: 10%;
+    margin-left: 25%;
+}
+
+.twitter__timeline{
+    margin: 20px 0;
+}
+
+.main__block{
+    width: 50%;
+    margin: 0 25%;
+    border: 1px solid #f60;
+}
+.main__block__title_text{
+    margin: 10px 20px;
+}
+.main__block__created_time{
+    font-size: 12px;
+    color: gray;
+}
+
+.main__block__content_text{
+    margin: 10px 20px;
+}
+
+.main__block__center_img{
+    width: 100%;
+    text-align: center;
+    
+}
+.main__block___img{
+    max-width: 300px;
+    max-height: 300px;
+    margin: 10px 20px;
+}

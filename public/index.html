@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="defApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/lib/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/lib/jquery-2.1.3.min.js"></script>
+    <script src="js/lib/angular.js"></script>
+    <script src="js/lib/angular-route.js"></script>
+    <script src="js/lib/bootstrap.js"></script>
+    <script src="js/my.js"></script>
+</head>
+
+<body ng-controller="defCtrl">
+    <div class="search__block" class="form-group">
+        <label for="inputFindByUserName">Find Twitter timeline by User name:</label>
+        <input class="form-control" name="inputFindByUserName" type="text" ng-model="screenName">
+    </div>
+    <input type="button" ng-click="FindBtUserName()" value="Find" class="btn btn-success findTimelineBtn">
+    <div class="twitter__timeline" ng-repeat="i in TimeLine track by $index">
+        <div class="main__block">
+            <div class="main__block__title_text">
+                <h3>{{i.user.name}}</h3><span class="main__block__created_time">{{i.created_at}}</span>
+            </div>
+            <div class="main__block__content_text">{{i.text}}</div>
+            <div ng-if="i.entities.media[0].media_url !== undefind" class="main__block__center_img">
+                <img class="main__block___img" src="{{i.entities.media[0].media_url}}" alt="img">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
